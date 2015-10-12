@@ -4,7 +4,7 @@ Algoritmos y Estructuras de Datos - 2011
 Hoja de trabajo 7
 Autor: Eduardo Castellanos
 
-Descripción: Programa principal. 
+Descripcion: Programa principal. 
 */
 import java.io.*;
 
@@ -13,7 +13,7 @@ class WordTypeCounter {
 	{
 		if(args.length > 1)
 		{
-			// Declaración e inicialización de variables.
+			// Declaracion e inicializacion de variables.
 			// el primer parametro indica el nombre del archivo con las definiciones de las palabras
 			File wordFile = new File(args[0]);
 			
@@ -22,7 +22,7 @@ class WordTypeCounter {
 			
 			// el tercer parametro sirve para seleccionar la implementacion que se usara para
 			// guardar el conjunto de palabras. Use el valor 1 para indicar que se empleara
-			// la implementacion SimpleSet que acompaña esta tarea.
+			// la implementacion SimpleSet que acompana esta tarea.
 			// Para el resto de implementaciones: 
 			//  2 Red Black Tree
 			//  3 Splay Tree
@@ -42,7 +42,7 @@ class WordTypeCounter {
 			long starttime;
 			long endtime;
 			
-			// Verificar que los dos parámetros que se pasaron sean archivos que existen
+			// Verificar que los dos parametros que se pasaron sean archivos que existen
 			if(wordFile.isFile() && textFile.isFile()) {
 				// Leer archivos
 				try
@@ -71,7 +71,7 @@ class WordTypeCounter {
 				line = wordreader.readLine();
 				while(line!=null)
 				{
-					wordParts = line.split("\\.");  // lo que esta entre comillas es una expresión regular.
+					wordParts = line.split("\\.");  // lo que esta entre comillas es una expresion regular.
 					if(wordParts.length == 2)
 					{
 						words.add(new Word(wordParts[0].trim(),wordParts[1].trim()));
@@ -92,8 +92,8 @@ class WordTypeCounter {
 				
 				while(line!=null)
 				{
-					// Separar todas las palabras en la línea.
-					textParts = line.split("[^\\w-]+"); // utilizar de separador cualquier caracter que no sea una letra, número o guión.
+					// Separar todas las palabras en la linea.
+					textParts = line.split("[^\\w-]+"); // utilizar de separador cualquier caracter que no sea una letra, numero o guion.
 					
 					// Revisar cada palabra y verificar de que tipo es. 
 					for(int i=0;i<textParts.length;i++)
@@ -121,7 +121,7 @@ class WordTypeCounter {
 				endtime = System.currentTimeMillis();
 				System.out.println("Texto analizado en " + (endtime-starttime) + " ms.");
 				
-				// Presentar estadísticas
+				// Presentar estadisticas
 				System.out.println("El texto tiene:");
 				System.out.println(verbs + " verbos");
 				System.out.println(nouns + " sustantivos");
