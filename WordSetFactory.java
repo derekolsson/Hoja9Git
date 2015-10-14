@@ -20,11 +20,17 @@ class WordSetFactory {
 	    if (tipo == 1)
 		    return new SimpleSet();
 		
-		if (tipo ==2)
+		if (tipo == 2)
 			return new RedBlackTreeSet();
 		
 		if (tipo == 3)
 			return new SplaySet();
+		
+		if (tipo == 4)
+			return new HashSet();
+		
+		if (tipo == 5)
+			return new TreeSet();
 		
 		else
 		    // aqui se regresara el set empleando sus implementaciones:
